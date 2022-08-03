@@ -14,7 +14,7 @@ import React from 'react';
     }    
 
     const onAdd = () => {
-        alert ("Añadido al carrito");
+        alert (`Añadiste al carrito ${cant} tortas`);
     }
 
     return(

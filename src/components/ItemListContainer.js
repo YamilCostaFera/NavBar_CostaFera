@@ -1,37 +1,16 @@
 import React from "react";
-import ItemCount from "./ItemCount";
-import data from "../../data/data.js";
+import ItemList from "./ItemList";
 
 
-function traerProductos() {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(data), 2500);
-    });
-  }
-
-export default function ItemListContainer(){
-    const [data,setData] = useState([]);
-
-    useEffect(() => {
-        traerProductos().then((respuesta) => {
-            setData(respuesta);
-            
-        });
-    }, []);
-
-    return (
+function ItemListContainer (){
+  return (
     <div className="container mx-auto mt-5">
-        {/* El mapa debería realizarse en el componente <ItemList>, al que le pasamos el estado "products" mediante props */}
-    <ItemList data:data/>
-    <ItemCount initial={1} stock={data.stock}/>
+    <ItemList />
     </div>
        );
 }
 
-
-
-
-
+export default ItemListContainer;
 
 
 
@@ -47,25 +26,4 @@ export default function ItemListContainer(){
 // }
 
 // export default ItemListContainer;
-
-
-// // import React, { useState, useEffect } from "react";
-// // import data from "../../data/data";
-// // import Card from "../Card/Card";
-
-
-// // const ItemListContainer = () => {
-// //   const [products, setProducts] = useState([]);
-
-// //   useEffect(() => {
-// //     traerProductos()
-// //       .then((respuesta) => {
-// //         setProducts(respuesta);
-// //       })
-// //       .catch((error) => {
-// //         console.log(error);
-// //       });
-// //   }, []);
-
-
 

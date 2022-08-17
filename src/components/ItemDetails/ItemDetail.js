@@ -1,22 +1,33 @@
-import React from "react";
 
-function ItemDetail (products){
-    return (
+import CardDetail from "./CardDetail";
+import React, { useState } from "react";
+
+import data from "../../data/data";
+
+const ItemDetail = () => {
+
+    const  [items] = useState(data);
+    
+    return(
         <div className= 'd-flex'>
-        {products.map((item) => {
-                return (
-                    <CardDetail
-                        key={item.id}
-                        title={item.title}
-                        price={item.price}
-                        porciones={item.porciones}
-                        description={item.description}
-                        img={item.img}
-            />
-            );
-                })}
-    </div>
-    )
-}
+            {items.map((item) => {
+                    return (
+                        <CardDetail
+                            id={item.id}
+                            title={item.title}
+                            price={item.price}
+                            img={item.img}
+                            category={item.category}
+                            stock={item.stock}
+                            porciones={item.porciones}
+                            description={item.description}
+                        />
+                );
+                    })}
+        </div>
+    ); 
+};
 
 export default ItemDetail;
+
+

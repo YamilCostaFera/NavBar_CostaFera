@@ -1,9 +1,9 @@
 import React from 'react';
+import './ItemCount.css';
 
-    function ItemCount(props){
-    console.log(props.stock);    
+    function ItemCount(props){   
 
-    const [cant, setClicks] = React.useState(1);
+    const [cant, setClicks] = React.useState(props.initial);
 
     const handleIncrement= () => {
         cant===props.stock ? alert ("no hay mas stock") :  setClicks(cant + 1);
@@ -20,8 +20,8 @@ import React from 'react';
     return(
         <>
         <div class='container-fluid'>
-            <h1>Cantidad</h1>
-            <h3> {cant} </h3>
+            <h5 className='itemCount-cantidad'>Cantidad</h5>
+            <h5 className='itemCount-cantidad'> {cant} </h5>
             <div class="btn-group mb-2 col-2" role="group" aria-label="Basic outlined example">    
                 <button onClick={handleDecrement } type="button" class="btn btn-outline-primary" > - </button>
                 <button onClick={ handleIncrement } type="button" class="btn btn-outline-primary" > + </button>
@@ -37,4 +37,3 @@ import React from 'react';
 }
 
 export default ItemCount;
-

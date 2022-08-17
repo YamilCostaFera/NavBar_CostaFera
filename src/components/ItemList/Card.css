@@ -1,0 +1,60 @@
+/*tarjetas de productos*/
+
+.card-productos{
+    background-color: white;
+    border-color: pink ;
+    box-shadow:  3px -3px rgb(252, 212, 218);
+    
+}
+.btn-productos{
+    background-color: white;
+    color:rgb(244, 3, 87);
+    font-weight: bold;
+    border: pink 2px solid;
+}
+.btn-productos:hover{
+    background-color: rgb(255, 99, 125);
+    color: white;
+    border: white solid 2px;
+}
+
+.btn-productos:focus{
+    background-color: rgb(255, 99, 125);
+    color: white;
+    border: white solid 2px;
+}
+
+.btn-productos:focus-visible{
+    background-color: rgb(255, 99, 125);
+    color: white;
+    border: white solid 2px;
+}
+
+
+.card-nombre{
+    text-align: center;
+    color: rgb(244, 3, 87);
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.card-descripcion{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(74, 72, 72);
+}
+
+.card-precio{
+    text-align: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(74, 72, 72);
+
+}
+
+.estilo{
+    background-color: rgb(255, 253, 251);
+    padding: 40px;
+}
+

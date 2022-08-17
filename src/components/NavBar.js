@@ -1,27 +1,32 @@
+
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 
-function ColorSchemesExample() {
+function NavBar() {
   return (
-    <>
+    <div className="nav-bar container-fluid my-2">
       <Navbar class="pt-2 pb-2" bg="light" variant="light">
         <Container>  
-          <Navbar.Brand href="#home">Dulce Pasteleria</Navbar.Brand>
+          <Link to="/">
+            <Navbar.Brand href="#home">Dulce Pasteleria</Navbar.Brand>
+          </Link>
           <Nav className=" d-flex align-items-end">
-            <Nav.Link href="#quiensoy">Quien soy</Nav.Link>
-            <Nav.Link href="#productos">Productos</Nav.Link>
-            <Nav.Link href="#carrito">Carrito</Nav.Link>
+            <Link className="me-3"  to="/">Home</Link>
+            <Link className="me-3"  to= "/category/1" >Con Chocolate</Link>
+            <Link className="me-3"  to= "/category/2" >Sin Chocolate</Link>
           </Nav>
           <div>
-           <CartWidget/>
+            <CartWidget/>
           </div>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 
-export default ColorSchemesExample;
+export default NavBar;
+

@@ -1,0 +1,57 @@
+
+.footer {
+    background-color:  rgb(255, 253, 251);
+  }
+  
+.list_1 li {
+    color: rgb(74, 72, 72);
+    font-family: 'Parisienne', cursive;
+    font-size: 32px;
+  }
+  
+.list_2 {
+    color: rgb(244, 3, 87);
+  }
+  
+.redes #iconos:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  
+.wp:hover {
+    background-color: rgb(244, 3, 87);
+  }
+
+.ig:hover {
+    color: rgb(244, 3, 87);
+  }
+  
+  
+.rotate_1 {
+    display: block;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  
+.rotate_1:hover {
+    -webkit-transform: rotate(360deg) translateZ(0);
+            transform: rotate(360deg) translateZ(0);
+  }
+  
+.copy {
+    background-color: white;
+    padding: 5px 0px;
+    color: rgb(74, 72, 72);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+
+/*CARDS */
+
+.card_style {
+    color: pink;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  }
+

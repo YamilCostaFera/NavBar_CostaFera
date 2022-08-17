@@ -38,30 +38,7 @@
 }
 
 
-.NavBar{
-  display: flex;
-  flex-direction: row;
-  background-color: pink;
-  color: white;
-
-}
-
-/* .lista{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  
-}  */
-
 li{
-  text-decoration: none;
-}
-
-
-/*CARDS */
-
-.card_style {
-  color: pink;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  list-style: none;
 }
 

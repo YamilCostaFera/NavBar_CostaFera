@@ -13,7 +13,6 @@ import './ItemCount.css';
         if (cant > 0){
             setClicks(cant-1)
         }
-        // cant === initial ? setClicks (cant) : setClicks(cant - 1);
     }    
 
     return(
@@ -32,7 +31,7 @@ import './ItemCount.css';
                  </div>
                 :
                 <div className='light bottom attached button disable container d-flex justify-content-center'>
-                      <button  class='mt-4 col-4 btn btn-outline-danger' > Sin stock </button>
+                      <button  class='mt-4 col-4 btn btn-outline-secondary' > Añadir al carrito </button>
                  </div>
                 
 

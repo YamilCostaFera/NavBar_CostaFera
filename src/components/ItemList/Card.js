@@ -8,7 +8,9 @@ function Card({ id, title, price, img, stock, porciones }) {
 
 
   return (
+    
         <div className="estilo container-fluid col-3">
+          <Link className="link" to={`/detalle/${id}`}>
           <div className ="row d-flex justify-content-center1">
             <div className='card  mb-4 card-productos'>
                 <img className='container h-60 card-img-top mt-2' src={img} alt="Imagen Torta" />
@@ -18,13 +20,15 @@ function Card({ id, title, price, img, stock, porciones }) {
                       <li>Porciones: {porciones} </li>
                     </ul>
                     <h5 className='card-precio'>Precio: $ {price}</h5>
-                    <h5 className='card-precio'>Cantidad en stok: {stock}</h5>
+                    <p className='card-precio fs-5'>Cantidad en stock: {stock}</p>
                     <Link to={`/detalle/${id}`}>
                       <Button text="Ver más" />
                     </Link>
               </div>
             </div>            
-          </div>
+          </div>                     
+          </Link>
+ 
         </div>
 
   );

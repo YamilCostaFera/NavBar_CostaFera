@@ -39,7 +39,7 @@ function CardDetail({ title, price, img, stock, porciones, description }) {
                       </div>
                       <div  className='container d-flex justify-content-center mb-3'>
                         <button class='bottom attached button mt-4 col-4 btn btn-outline-primary' >
-                          <Link to="/">Volver</Link>                     
+                          <Link  className="link" to="/">Volver</Link>                     
                         </button>
 
                       </div> 

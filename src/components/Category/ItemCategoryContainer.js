@@ -4,7 +4,7 @@ import CardCategory from "./CardCategory";
 import { useParams } from "react-router-dom";
 
 function ItemCategoryContainer({ itemid }) {
-  const [item, setItem] = useState({});
+  const [item, setItem] = useState([]);
 
   const {category} = useParams();
 
@@ -30,6 +30,7 @@ function ItemCategoryContainer({ itemid }) {
   return (
     <div className="main">
       <CardCategory
+        key={item.id}
         id={item.id}
         title={item.title}
         price={item.price}

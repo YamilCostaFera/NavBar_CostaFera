@@ -1,35 +1,24 @@
+Link {
+    text-decoration: none;
+
+}
+
+
+
 /*tarjetas de productos*/
 
 .card-productos{
     background-color: white;
-    border-color: pink ;
-    box-shadow:  3px -3px rgb(252, 212, 218);
+   
     
 }
-.btn-productos{
+
+.card-productos:hover{
     background-color: white;
-    color:rgb(244, 3, 87);
-    font-weight: bold;
-    border: pink 2px solid;
+    border-color: pink ;
+    box-shadow: 1px 1px gray;  
+    
 }
-.btn-productos:hover{
-    background-color: rgb(255, 99, 125);
-    color: white;
-    border: white solid 2px;
-}
-
-.btn-productos:focus{
-    background-color: rgb(255, 99, 125);
-    color: white;
-    border: white solid 2px;
-}
-
-.btn-productos:focus-visible{
-    background-color: rgb(255, 99, 125);
-    color: white;
-    border: white solid 2px;
-}
-
 
 .card-nombre{
     text-align: center;

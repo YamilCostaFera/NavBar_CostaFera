@@ -1,19 +1,20 @@
 // import "./card.css";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
 
 function CardDetail({ title, price, img, stock, porciones, description }) {
+  const [add,setAdd] = useState(false)
 
-  function handleAdd(count) {
-    console.log("Agregar al carrito", count);
-    /* setState */
-  }
+  const addToCart = () => {
+      setAdd(!add)
+    }
+
 
 
   return (
     
-    <div className='bg-danger card d-flex container ms-5 mt-5 col-10 row justify-content-center mb-5'>
+    <div className='bg-light card d-flex container ms-5 mt-5 col-10 row justify-content-center mb-5'>
         <div>
               <td className='col-4'>
                 <img className='container h-60 mt-5' src={img} alt="Imagen Torta" />
@@ -25,15 +26,23 @@ function CardDetail({ title, price, img, stock, porciones, description }) {
                 <p className='mt-1'>Porciones:{porciones}</p>        
               </td>
               <td class="fila_cantidad">
-              <div  className='mb-3'>  
-                  <ItemCount
-                    initial={1}
-                    stock={stock}
-                    onAdd={handleAdd}
-                    text={"Finalizar"}
-                  />
-                  <Link to="/">Volver</Link>                     
-                </div> 
+                    <div>
+                            {
+                              add ? 
+                                  <div className="container d-flex justify-content-center"> Añadido! </div>
+                                  :
+                                  <ItemCount initial={1} stock={stock} onAdd={addToCart} />                        
+                            }
+                      </div>
+                      <div className='container d-flex justify-content-center'>
+                          <button class='bottom attached button mt-4 col-4 btn btn-outline-primary' > Finalizar Compra </button>
+                      </div>
+                      <div  className='container d-flex justify-content-center mb-3'>
+                        <button class='bottom attached button mt-4 col-4 btn btn-outline-primary' >
+                          <Link to="/">Volver</Link>                     
+                        </button>
+
+                      </div> 
               </td>
         </div>
     </div>

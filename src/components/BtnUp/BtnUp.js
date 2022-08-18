@@ -4,7 +4,7 @@ import './BtnUp.css';
 function BtnUp () {
     return (
         <div>
-            <button class="btn-scrolltop" id="btn_scrolltop">
+            <button className="btn-scrolltop">
                 <p>Up</p>
             </button>
         </div>

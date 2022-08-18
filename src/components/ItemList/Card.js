@@ -2,9 +2,11 @@ import React from "react";
 import Button from "../Button/Button";
 import "./Card.css";
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount";
+
 
 function Card({ id, title, price, img, stock, porciones }) {
+
+
   return (
         <div className="estilo container-fluid col-3">
           <div className ="row d-flex justify-content-center1">
@@ -16,11 +18,11 @@ function Card({ id, title, price, img, stock, porciones }) {
                       <li>Porciones: {porciones} </li>
                     </ul>
                     <h5 className='card-precio'>Precio: $ {price}</h5>
+                    <h5 className='card-precio'>Cantidad en stok: {stock}</h5>
                     <Link to={`/detalle/${id}`}>
-                      <Button text="Ver más"></Button>
+                      <Button text="Ver más" />
                     </Link>
-                    <ItemCount initial={1} stock={stock}/>
-                </div>
+              </div>
             </div>            
           </div>
         </div>

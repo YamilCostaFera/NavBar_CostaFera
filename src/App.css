@@ -1,44 +1,94 @@
-.App {
-  text-align: center;
+
+/* NAVBAR */
+
+
+.logo {
+  width: 100px;
+  height: auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div .boxNav {
+  border-bottom: solid;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar {
+  background: black;
+  font-weight: bold;
+  font-size: large; 
+}
+
+.navbar-brand {width: 20%;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navbar-categorias{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    padding-left: 25px;
+    padding-right: 25px;
+
   }
+
+.navbar-categorias:hover{
+    color: orangered;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cart-ico{
+  width: 100px;
+}
+
+
+
+
+
+/* LIST CARD */
+
+
+ div .card {
+  width: 30%;
+  margin: 15px;
+} 
+
+.card-style:hover{
+  box-shadow: 4px 4px gray;
+  
+}
+
+.card-boton{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.Count{
+
+  padding: 20px;
+  border: solid 3px grey;
+  margin: 5px;
+  font-size: 20px;
+  color: grey;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boton-volver{
+  color: white;
 }
 
 
-li{
-  list-style: none;
-}
 
+/* CART */
+
+
+.cart-empty{
+  color: grey;
+  margin-top: 100px;
+  
+}

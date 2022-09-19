@@ -12,12 +12,6 @@ const firebaseConfig = {
   storageBucket: "ecommerce-coder-6fca4.appspot.com",
   messagingSenderId: "520121117779",
   appId: "1:520121117779:web:a9a2f52ab4037e6fc2eaa6"
-  // apiKey: "AIzaSyCTMmdtUljt_cbCM3jhQvCrw74yf6GlPHs",
-  // authDomain: "reactjs-castiello.firebaseapp.com",
-  // projectId: "reactjs-castiello",
-  // storageBucket: "reactjs-castiello.appspot.com",
-  // messagingSenderId: "731342434436",
-  // appId: "1:731342434436:web:023939b9cf0ba686efd2d1"
 };
 
 

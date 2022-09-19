@@ -88,77 +88,30 @@ const Cart = () => {
                 </div>
 
                 {/* FORMULARIO Y TOTAL DE LA COMPRA             */}
-                <div>
-
-                        {
+                <div className='container'>
+                    
+                    <div className='d-flex justify-content-center' >
+                    {
                               test.cartList.length > 0 &&
-                              <Card>        
-                                    {/* <CardBody>
-                                      <Form>
+                              <Card className='bg-warning'>        
+                                    {/* TOTAL COMPRA */}
+                                    <CardBody className='text-center'>
 
-                                              <FormGroup>
-                                                  <Label for="Name">
-                                                    Nombre
-                                                  </Label>
-
-                                                  <Input
-                                                    id="Name"
-                                                    name="text"
-                                                    placeholder="Escribi tu nombre"
-                                                    type="text"
-                                                    required
-                                                  />
-                                              </FormGroup>
-
-                                              <FormGroup>
-                                                  <Label for="Phone">
-                                                    Número de contacto
-                                                  </Label>
-
-                                                  <Input
-                                                    id="Phone"
-                                                    name="number"
-                                                    placeholder="Escribí tu celular"
-                                                    type="number"
-                                                    required
-                                                  />
-                                              </FormGroup>
-                                        
-                                              <FormGroup>
-                                                  
-                                                  <Label for="Email">
-                                                    Email
-                                                  </Label>
-                                                  
-                                                  <Input
-                                                    id="Email"
-                                                    name="email"
-                                                    placeholder="with a placeholder"
-                                                    type="email"
-                                                    required
-                                                  />
-
-                                              </FormGroup>
-
-                                      </Form>
-  
-                                    </CardBody>        */}
-
-                                    <CardBody>
-
-                                        <CardTitle tag="h5">Your Order</CardTitle>
-                                        <CardSubtitle className="mb-2 text-muted" tag="h6">Subtotal</CardSubtitle>
-                                        <CardText>{test.calcSubTotal()}</CardText> 
-                                        <CardText>Total</CardText>
-                                        <CardText>{test.calcTotal()}</CardText>                       
+                                        <CardTitle className="text-white" tag="h4">Your Order</CardTitle>
+                                        <CardSubtitle className="mb-2 text-muted" tag="h5">Subtotal</CardSubtitle>
+                                        <CardText tag="h5">${test.calcSubTotal()}</CardText> 
+                                        <CardText tag="h4" >Total</CardText>
+                                        <CardText tag="h4">${test.calcTotal()}</CardText>                       
                                         <Button onClick={finishOrder}>FINALIZAR COMPRA</Button>                        
 
                                     </CardBody>
-                                    
+                                    {/* FORMULARIO   */}
                                     <CartForm handleClose={handleClose} show={show} />
                             
                             </Card>
                           }
+                    </div>
+                        
 
                 </div>          
 
@@ -166,7 +119,7 @@ const Cart = () => {
         
         </>
     );
-}
+} 
 
 export default Cart;
 

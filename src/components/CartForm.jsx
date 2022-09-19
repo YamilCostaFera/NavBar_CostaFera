@@ -21,12 +21,6 @@ const CartForm = ({ show, handleClose }) => {
     const  db = getFirestore();
     const  newOrderRef = collection(db, 'orders');
     
-    
-    // const finishOrder = () =>{
-    //     createOrderInFirestore ();
-    //     setDataRejected(false)
-    // }
-
 
 
     const test = useContext(CartContext);
@@ -125,28 +119,29 @@ const CartForm = ({ show, handleClose }) => {
     return (
         <>
             {compraConfirmada ?
-
-                <Modal show={show} onHide={handleClose} size='xl' centered  >
+                //MODAL FIN DEL PEDIDO
+                <Modal show={show} onHide={handleClose} size='l' centered  >
                     <Modal.Header>
                         <Modal.Title >Pedido realizado!</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className='text-center'>
                         <h4>Su pedido fue realizado con exito.</h4>
-                        <h4>Id del pedido:{idOrder}</h4>
+                        <h5>Id del pedido:{idOrder}</h5>
+                        <p>A la brevedad nos comunicaremos contigo!</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button className="w-100" color="primary" onClick={clear}>
+                        <Button className="w-100" color="danger" onClick={clear}>
                             Cerrar
                         </Button>
                     </Modal.Footer>
                 </Modal>
                 :
-                <Modal style={{ overflow: "auto", }} show={show} onHide={handleClose} size='xl'   >
+                <Modal style={{ overflow: "auto", }} show={show} onHide={handleClose} size='xl' >
                     <Modal.Body>
                         {/* FORMULARIO */}
                         <div className="container">
                               <div className="d-flex justify-content-center">
-                                    <Card>
+                                    <Card bg="warning">
                                             <Form className="m-3" onSubmit={validacionForm}>
 
                                                 <Form.Group className="mb-3" controlId="formBasicName">
@@ -169,7 +164,7 @@ const CartForm = ({ show, handleClose }) => {
                                                     <Form.Control onChange={(e) => updatePhone(e)} type="text" required placeholder="Escribí tu celular" />
                                                 </Form.Group>
                                                 
-                                                <Button className="w-100" type="submit" variant="outline-success">
+                                                <Button type="submit" className='w-100 mt-3 mb-3 fw-bold'  variant='outline-danger' color="secondary">
                                                     Finalizar pedido
                                                 </Button>
                                             
@@ -182,7 +177,7 @@ const CartForm = ({ show, handleClose }) => {
                         
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button className="w-100" variant="outline-danger" onClick={handleClose}>
+                        <Button className="w-75" color="danger" variant="outline-danger" onClick={handleClose}>
                             Cancelar
                         </Button>
                     </Modal.Footer>

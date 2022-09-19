@@ -17,7 +17,7 @@ const ItemDetail = ({ productos }) => {
   const onAdd = (quantity) => {
     setItemCount(quantity);
     test.addToCart(productos, quantity);
-    // alert(`Agregaste ${quantity} cuadros al carrito!`);
+    
       }
 
       return(
@@ -69,7 +69,8 @@ const ItemDetail = ({ productos }) => {
                   </div>
               </div>
 
-          : 
+          :
+          //LOADING  
           <Loader />
 
         }

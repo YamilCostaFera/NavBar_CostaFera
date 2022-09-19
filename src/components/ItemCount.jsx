@@ -33,7 +33,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
           {
                 count > 0 
                 ? 
-                <Button  className='w-100' variant="contained" color="success" size="lg"  onClick={() => onAdd(count)}>Add to Cart</Button>
+                <Button  className='w-100' variant="contained" color="success" size="lg" onClick={() => onAdd(count)}>Add to Cart</Button>
                 : 
                 <Button  className='w-100' outline color="info" >Add to Cart</Button>
             }
